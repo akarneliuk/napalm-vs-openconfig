@@ -2,7 +2,6 @@
 
 # Modules
 import datetime
-from pprint import pprint
 from ncclient import manager
 import xmltodict
 import json
