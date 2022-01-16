@@ -32,15 +32,13 @@ if __name__ == "__main__":
             filter_str = "<filter type=\"subtree\"><interfaces xmlns=\"http://openconfig.net/yang/interfaces\"/></filter>"
             r1_str = str(device_obj.get(filter=filter_str))
 
-            print("Interfaces configuration:\n")
+            print("Interfaces operational data including ARP:\n")
             print(json.dumps(xmltodict.parse(r1_str), indent=4))
-
-            print("\n\nARP table:")
 
         ## Get final timestamp
         t2 = datetime.datetime.now()
 
         ## Print time
         print("=" * 84)
-        print("For device",  hostname_str,  "spent",  str(t2 - t1))
+        print("Completed in",  str(t2 - t1), "for", hostname_str)
         print("=" * 84)

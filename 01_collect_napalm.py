@@ -27,7 +27,7 @@ if __name__ == "__main__":
         ## Connect to device
         with driver_obj(hostname=hostvar_dict["ip_address"], username=hostvar_dict["username"],
                         password=hostvar_dict["password"]) as device_obj:
-            print("Interfaces configuration:\n")
+            print("Interfaces operational data:\n")
             print(json.dumps(device_obj.get_interfaces(), indent=4))
 
             print("\n\nARP table:")
@@ -38,5 +38,5 @@ if __name__ == "__main__":
 
         ## Print time
         print("=" * 84)
-        print("For device",  hostname_str,  "spent",  str(t2 - t1))
+        print("Completed in",  str(t2 - t1), "for", hostname_str)
         print("=" * 84)
