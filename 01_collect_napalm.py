@@ -33,6 +33,9 @@ if __name__ == "__main__":
             print("\n\nARP table:")
             print(json.dumps(device_obj.get_arp_table(), indent=4))
 
+            print("\n\nConfig:")
+            print(json.dumps(device_obj.get_config(), indent=4))
+
         ## Get final timestamp
         t2 = datetime.datetime.now()
 

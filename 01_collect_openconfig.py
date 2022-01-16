@@ -32,7 +32,7 @@ if __name__ == "__main__":
             filter_str = "<filter type=\"subtree\"><interfaces xmlns=\"http://openconfig.net/yang/interfaces\"/></filter>"
             r1_str = str(device_obj.get(filter=filter_str))
 
-            print("Interfaces operational data including ARP:\n")
+            print("Interfaces operational and config data including ARP:\n")
             print(json.dumps(xmltodict.parse(r1_str), indent=4))
 
         ## Get final timestamp
