@@ -2,3 +2,5 @@ napalm
 ncclient
 pyyaml
 xmltodict
+# Needed for Nokia Napalm on top of what already exist
+dictdiffer
